@@ -107,7 +107,7 @@ jobs:
             create-release
             --server="${{ secrets.OCTOPUS_SERVER_URL }}"
             --apiKey="${{ secrets.OCTOPUS_API_KEY }}"
-            --space="Flask Sample App"
+            --space="Default"
             --project="Flask Sample App"
             --version="${{ needs.build-and-push.outputs.image-version }}"
             --channel="${{ github.ref == 'refs/heads/main' && 'Production' || 'Development' }}"
@@ -121,7 +121,7 @@ jobs:
             deploy-release
             --server="${{ secrets.OCTOPUS_SERVER_URL }}"
             --apiKey="${{ secrets.OCTOPUS_API_KEY }}"
-            --space="Flask Sample App"
+            --space="Default"
             --project="Flask Sample App"
             --releaseNumber="${{ needs.build-and-push.outputs.image-version }}"
             --environment="Development"
@@ -135,7 +135,7 @@ jobs:
             deploy-release
             --server="${{ secrets.OCTOPUS_SERVER_URL }}"
             --apiKey="${{ secrets.OCTOPUS_API_KEY }}"
-            --space="Flask Sample App"
+            --space="Default"
             --project="Flask Sample App"
             --releaseNumber="${{ needs.build-and-push.outputs.image-version }}"
             --environment="Production"
