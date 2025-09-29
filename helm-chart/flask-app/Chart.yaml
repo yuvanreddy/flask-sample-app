@@ -1,0 +1,14 @@
+apiVersion: v2
+name: flask-sample-app
+description: A Helm chart for Flask Sample Application
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - flask
+  - python
+  - web
+home: https://github.com/your-username/flask-sample-app
+maintainers:
+  - name: Your Name
+    email: your-email@example.com
