@@ -5,9 +5,9 @@
 replicaCount: 1
 
 image:
-  # CloudSmith registry URL
-  registry: docker.cloudsmith.io
-  repository: flask-sample-app/flask-sample-app
+  # Docker Hub registry
+  registry: docker.io
+  repository: yuvanreddy/flask-sample-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
