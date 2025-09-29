@@ -111,7 +111,7 @@ jobs:
             --project="Flask Sample App"
             --version="${{ needs.build-and-push.outputs.image-version }}"
             --channel="${{ github.ref == 'refs/heads/main' && 'Production' || 'Development' }}"
-            --package="flask-sample-app:${{ needs.build-and-push.outputs.image-version }}"
+            --package="dyuvraj/flask-sample-app:${{ needs.build-and-push.outputs.image-version }}"
 
       - name: Deploy to Development
         if: github.ref == 'refs/heads/develop'
